@@ -1,3 +1,3 @@
 # Tictactoe
-Frondend files.
+Frontend files.
 
