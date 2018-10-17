@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+.jumbotron{
+    margin-top:2em;
+    height: 2em;   
+}
+
+table{
+   width:300px;
+   height:300px;
+  margin-left:auto;
+  margin-right: auto;
+  font: 58px bold;
+  
+  
+}
+td{
+    border: 5px solid black; 
+    width: 85px;
+    height:86px; 
+}
+.clickable:hover{
+    background-color:#a6bcd1;
+}
+.winningCombo{
+    background-color:rgb(80, 131, 80);
+}
+#box{
+    font: 2em rgb(31, 88, 31);
+    font-weight: 300;
+}

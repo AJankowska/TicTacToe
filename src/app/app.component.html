@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="col-12 dark">
+      <div id="title">TicTacToe</div>
+    </div>
+    <div class="col-12 light">
+      <div class="row" id="imie" >
+        <div class="offset-3 col-6 row">
+          <div *ngIf="hideInput==false" class="col-9"><input type="text" [(ngModel)]="name" placeholder="Wpisz imię"></div>
+          <div *ngIf="hideInput==false" class="col-3"><button class="btn btn-success" (click)="saveName()">Play</button></div>
+          <div *ngIf="hideInput!==false" class="col-12">
+            <span *ngIf="name!==null" class="badge badge-success naming">Welcome {{name}}</span>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+    <div class="row" id="main">
+      <div class="col-sm-3 dark gradient-border">
+          <div class="score"> Rozegranych rund: <span class="badge badge-light">{{allGames}}</span></div>
+          <div class="score"> Wygranych rund: <span class="badge badge-light">{{wonGames}}</span></div>
+          <div class="mini">Wszystkie: <span class="badge badge-light">{{allGames}}</span></div>
+          <div class="mini">Twoje: <span class="badge badge-light">{{wonGames}}</span></div>
+          <div class="progress" *ngIf="allGames!==0">
+            <div id="progressWon" class="progress-bar progress-bar-success" role="progressbar" [ngStyle]="{width: wonPercent +'%'}">
+              Won
+            </div>
+            <div id="progressTie" class="progress-bar progress-bar-warning" role="progressbar" [ngStyle]="{width: tiePercent +'%'}">
+              Tie
+            </div>
+            <div id="progressLost" class="progress-bar progress-bar-danger" role="progressbar" [ngStyle]="{width: lostPercent +'%'}">
+             Lost
+            </div>
+          </div>
+      </div>
+      <div id="wholemain"class="col-sm-9 gradient-border" *ngIf="name!==null">
+          <div class="row" id="boxextended">
+              <div class="col-3"></div>
+              <div id="box" class="container col-6"></div>
+              <div class="col-3"></div>
+          </div>
+          <div id="divMain"></div>
+          <div *ngIf="restart==true"><button class="btn btn-info"(click)="playAgain()">Play Again</button></div>
+      </div>
+    </div>
+  </div>

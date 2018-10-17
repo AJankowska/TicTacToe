@@ -1,0 +1,111 @@
+@media screen and  (max-width: 600px) {
+    .col-sm-9 {
+        width:100%;
+    }
+    .col-sm-3{
+        width:100%;
+        position: fixed;
+        bottom:0;
+    }
+       
+}
+@media screen and (min-width: 600px) {
+    .gradient-border {
+        border-width: 3px;
+        border-style: solid;
+        -webkit-border-image: 
+          -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgb(207, 203, 203))) 1 90%;
+        -webkit-border-image: 
+          -webkit-linear-gradient(black,rgb(207, 203, 203)) 1 90%;
+        -moz-border-image:
+          -moz-linear-gradient(black,rgb(207, 203, 203)) 1 90%;    
+        -o-border-image:
+          -o-linear-gradient(black, rgb(207, 203, 203)) 1 90%;
+        border-image:
+          linear-gradient(to bottom, black, rgb(207, 203, 203)) 1 90%;
+    }
+    .mini{
+        display: none;
+    }
+    .score{
+        display:block;
+        margin: 10px 0px;
+    }
+   
+}
+@media screen and (min-width:401px) and (max-width:599px){
+    .mini{
+        display: none;
+    }
+    .score{display: inline-block}
+}
+@media screen and (max-width: 400px) {
+    .score{
+        display: none;
+    }
+    .mini{
+        display:inline-block;
+    }
+}
+
+
+body{
+    background-color: rgb(53, 51, 51);
+    
+}
+.dark {
+    background-color: rgb(53, 51, 51);
+    color:rgb(207, 203, 203);
+}
+.light{
+    background-color:rgb(207, 203, 203);
+    color:rgb(53, 51, 51);
+}
+#title{
+    vertical-align: middle;
+    text-align: center;
+    font: 3em bold;
+}
+#imie{
+    padding:10px 0px;
+    border-top: solid 1px rgb(122, 118, 118);
+}
+.btn-info{
+    margin: 30px 0px;
+}
+.naming{
+    height:2em;
+    text-align: center;
+    vertical-align: middle;
+}
+input{
+    height:100%;
+}
+div{
+    vertical-align: middle;
+    text-align: center;
+    padding: 0px;
+}
+#main{
+    height:auto;
+    border-top: solid 3px rgb(122, 118, 118);
+}
+
+.winner{
+    background-color:rgb(155, 224, 155);
+}
+.looser{
+    background:rgb(114, 54, 54);
+}
+.tie{
+    background: rgb(231, 138, 105);
+}
+.progress-bar-success{
+    background-color:rgb(155, 224, 155);
+}
+.progress-bar-danger{
+    background:rgb(114, 54, 54);
+}
+.progress-bar-warning{
+    background: rgb(231, 138, 105);
+}
